@@ -1,0 +1,6 @@
+* PWL from file
+.subckt filesource outp outn params: infile='infile'
+afs %vd([outp outn]) filesrc
+.model filesrc filesource (file='infile' amploffset=[0] amplscale=[1]
++ timeoffset=0 timescale=1)
+.ends
